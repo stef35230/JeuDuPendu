@@ -75,16 +75,6 @@ H1 {
   background-color: brown;
 }
 
-.image {
-  width: 900px;
-}
-
-@media screen and (max-width: 950px) {
-  .image {
-    width: 90vw;
-  }
-}
-
 #motATrouver {
   border: solid black;
   height: 4.12371em;
@@ -153,6 +143,37 @@ H1 {
 }
 
 #message .visible {
+  opacity: 100;
+}
+
+.animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: last baseline;
+      align-self: last baseline;
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+@media screen and (max-width: 950px) {
+  .animation {
+    height: 30vh;
+  }
+}
+
+.animation .image {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.animation .visible {
   opacity: 100;
 }
 /*# sourceMappingURL=style.css.map */
